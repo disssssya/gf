@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Комбинированная лабораторная работа</title>
+    <script>
+        function shows(n) {
+            var el = document.getElementById("T1").style;
+            if (n == 1) {
+                el.visibility = 'visible';
+            } else {
+                el.visibility = 'hidden';
+            }
+        }
+
+        function toggleImage() {
+            var img = document.getElementById("image");
+            var button = document.getElementById("toggleButton");
+            if (img.style.visibility === 'hidden') {
+                img.style.visibility = 'visible';
+                button.value = 'Скрыть изображение';
+            } else {
+                img.style.visibility = 'hidden';
+                button.value = 'Показать изображение';
+            }
+        }
+
+        function toggleDisplay() {
+            var text = document.getElementById("displayText");
+            var button = document.getElementById("toggleDisplayButton");
+            if (text.style.display === 'none') {
+                text.style.display = 'block';
+                button.value = 'Скрыть текст';
+            } else {
+                text.style.display = 'none';
+                button.value = 'Показать текст';
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: silver;
+            text-align: center;
+        }
+        h3:hover {
+            color: white;
+        }
+        .filtered-text {
+            font-size: 1.5rem;
+            transition: filter 0.5s;
+        }
+        .filtered-text:hover {
+            filter: blur(5px) brightness(0.8) contrast(150%);
+        }
+        .filtered-image {
+            width: 300px;
+            height: auto;
+            margin-top: 1rem;
+            transition: filter 0.5s, transform 0.5s;
+        }
+        .filtered-image:hover {
+            filter: sepia(70%) saturate(200%) hue-rotate(90deg);
+            transform: scale(1.1);
+        }
+        #T1 {
+            visibility: hidden;
+        }
+        #image {
+            visibility: visible;
+        }
+        #displayText {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h3 onmouseout="this.style.color = 'black'" onmouseover="this.style.color = 'white'">Изменение цвета заголовка</h3>
+    <h3>Динамическое выравнивание</h3>
+    <p onclick="this.style.textAlign ='center'" ondblclick="this.style.textAlign = 'right'">Текст динамически выравнивается</p>
+    <h3>Отображение и скрытие текста</h3>
+    <form name="form1">
+        <input type="button" value="Показать" onclick="shows(1)">
+        <input type="button" value="Скрыть" onclick="shows(2)">
+    </form>
+    <span id="T1">
+        <hr>
+        Текст, который либо показываем, либо скрываем
+        <hr>
+    </span>
+    <h3>Скрытие и отображение изображения</h3>
+    <input type="button" id="toggleButton" value="Скрыть изображение" onclick="toggleImage()">
+    <br><br>
+    <img id="image" src="https://sun9-66.userapi.com/impg/GRFo7uOnMOqVWNuiuIjMd_BkNdbYvSLkUSapjA/LyfWXocpiT0.jpg?size=401x400&quality=95&sign=61fe885e6bc1458ea7cced71c05a83b6&type=album" alt="Изображение">
+    <h3>Управление отображением</h3>
+    <input type="button" id="toggleDisplayButton" value="Скрыть текст" onclick="toggleDisplay()">
+    <br><br>
+    <div id="displayText">
+        <hr>
+        Это текст, который мы будем скрывать и отображать.
+        <hr>
+    </div>
+</body>
+</html>

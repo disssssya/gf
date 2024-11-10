@@ -1,0 +1,96 @@
+.first {
+    transition: opacity 0.3s; /* Плавный переход */
+}
+
+.first a img:hover {
+    opacity: 0.7; /* Изменение прозрачности при наведении */
+}
+
+body {
+    background-image: url('https://html5book.ru/wp-content/uploads/2015/06/background28.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Фон остается зафиксированным при прокрутке */
+    background-position: center; /* Центрирование изображения */
+    }
+
+h1 {
+    color: darkgray;
+    }
+
+
+p {
+    font-size: 18px;
+    }
+
+
+.content {
+    text-align: center;
+    padding: 2rem;
+    }
+
+
+h1, p {
+    margin: 10px;
+    }
+    
+div {
+    padding: 5px;
+}
+div p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+#main {
+    background-color: gainsboro;
+    width: fit-content;
+    text-align: center;
+}
+.highlight {
+    font-weight: bold;
+    text-align: center;
+}
+
+.filtered-image {
+    width: 300px;
+    height: auto;
+    margin-top: 1rem;
+    transition: filter 0.5s, transform 0.5s;
+}
+
+.filtered-image:hover {
+    filter: saturate(200%);
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+.container {
+    margin: 100px 0 0 200px;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container a {
+    display:contents;
+}
+
+.container a img { 
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(red, green, blue, alpha);
+    transition: all ease-in-out 0.9s;
+}
+
+.container a img:hover {
+    width: 75%;
+}
+

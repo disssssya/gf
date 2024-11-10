@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.filtered-text {
+    font-size: 1.5rem;
+    transition: filter 0.5s;
+}
+
+.filtered-text:hover {
+    filter: blur(5px) brightness(0.8) contrast(150%);
+}
+
+.filtered-image {
+    width: 300px;
+    height: auto;
+    margin-top: 1rem;
+    transition: filter 0.5s, transform 0.5s;
+}
+
+.filtered-image:hover {
+    filter: sepia(70%) saturate(200%) hue-rotate(90deg);
+    transform: scale(1.1);
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эксперименты с фильтрами</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="content">
+        <h1>Добро пожаловать в мой экспериментальный сайт</h1>
+        <p class="filtered-text">Этот текст будет изменяться с помощью фильтров.</p>
+        <img src="https://sun9-66.userapi.com/impg/GRFo7uOnMOqVWNuiuIjMd_BkNdbYvSLkUSapjA/LyfWXocpiT0.jpg?size=401x400&quality=95&sign=61fe885e6bc1458ea7cced71c05a83b6&type=album" alt="Описание изображения" class="filtered-image" width="100">
+    </div>
+</body>
+</html>

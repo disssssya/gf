@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа №2</title>
+</head>
+<body>
+
+    <h2>МАР-карта с изображением</h2>
+    <img src="https://sun9-77.userapi.com/impg/vfbDAFOcU8QmsRXxTXoVXuZ5OAj197oXMW6uHw/gcDG-mVb2xU.jpg?size=562x85&quality=95&sign=c292d1de8ae1001f6009fbf2a9a7f119&type=album" usemap="#imagemap" alt="Карта с ссылками" width="450">
+
+    <map name="imagemap">
+        <area shape="rect" coords="0,0,100,100" href="1.html" alt="Ссылка 1">
+        <area shape="rect" coords="100,0,300,100" href="2.html" alt="Ссылка 2">
+        <area shape="rect" coords="200,0,400,100" href="3.html" alt="Ссылка 3">
+    </map>
+
+
+    <frame src="title.htm" name="title">
+    <h1>Название документа</h1>
+    <style>
+        body {
+            background-color: #ffcfcfe7;
+        }
+    </style>
+
+    <form action="process_form.php" method="post">
+        <label for="lastname">Фамилия:</label><br>
+        <input type="text" id="lastname" name="lastname"><br>
+
+        <label for="firstname">Имя:</label><br>
+        <input type="text" id="firstname" name="firstname"><br>
+
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        Ваш текст:
+        <br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Введите сообщение"></textarea><br>
+
+        <input type="checkbox" id="rating" name="rating" value="good">
+
+        <label for="rating">Оценка сайта</label><br>
+
+        <input type="checkbox" id="opinion" name="opinion" value="positive">
+
+        <label for="opinion">Мнение о сайте</label><br>
+
+        <input type="submit" value="Отправить">
+
+        <input type="reset" value="Очистить">
+    </form>
+</body>
+</html>

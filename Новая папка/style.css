@@ -1,0 +1,33 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.filtered-text {
+    font-size: 1.5rem;
+    transition: filter 0.5s;
+}
+
+.filtered-text:hover {
+    filter: blur(5px) brightness(0.8) contrast(150%);
+}
+
+.filtered-image {
+    width: 300px;
+    height: auto;
+    margin-top: 1rem;
+    transition: filter 0.5s, transform 0.5s;
+}
+
+.filtered-image:hover {
+    filter: sepia(70%) saturate(200%) hue-rotate(90deg);
+    transform: scale(1.1);
+}
